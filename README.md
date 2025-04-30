@@ -1,7 +1,3 @@
-# Traffic-Policer-2025-Update
-Traffic Policer 2025 Update (Sparky Edition)
-
-
 # 🚔 Traffic Policer 2025
 
 An advanced and fully-restored LSPDFR plugin by **Albo1125**, revived and maintained for modern systems.
