@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -10,8 +10,28 @@ using LSPD_First_Response.Mod.API;
 
 namespace Traffic_Policer
 {
-    public enum EVehicleDetailsStatus { None, Expired, Valid };
-    
+    /// <summary>
+    /// Represents the status of a vehicle's details such as insurance and registration.
+    /// </summary>
+    public enum EVehicleDetailsStatus
+    {
+        /// <summary>
+        /// Indicates that the vehicle detail is not available or applicable.
+        /// </summary>
+        None,
+
+        /// <summary>
+        /// Indicates that the vehicle detail has expired.
+        /// </summary>
+        Expired,
+
+        /// <summary>
+        /// Indicates that the vehicle detail is valid.
+        /// </summary>
+        Valid
+    };
+
+
     internal class VehicleDetails
     {
         public EVehicleDetailsStatus InsuranceStatus;
@@ -183,3 +203,4 @@ namespace Traffic_Policer
         }
     }
 }
+

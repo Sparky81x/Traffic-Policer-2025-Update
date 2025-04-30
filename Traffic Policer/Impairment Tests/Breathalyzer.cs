@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -10,7 +10,52 @@ using LSPD_First_Response.Mod.API;
 
 namespace Traffic_Policer.Impairment_Tests
 {
-    public enum AlcoholLevels { Zero, UnderLimit, JustUnderLimit, Limit, JustOverLimit, OverLimit, OverDoubleLimit, OverTripleLimit}
+    /// <summary>
+    /// Represents the various levels of alcohol detected in a breathalyzer test.
+    /// </summary>
+    public enum AlcoholLevels
+    {
+        /// <summary>
+        /// No alcohol detected.
+        /// </summary>
+        Zero,
+
+        /// <summary>
+        /// Alcohol level is under the legal limit.
+        /// </summary>
+        UnderLimit,
+
+        /// <summary>
+        /// Alcohol level is just under the legal limit.
+        /// </summary>
+        JustUnderLimit,
+
+        /// <summary>
+        /// Alcohol level is at the legal limit.
+        /// </summary>
+        Limit,
+
+        /// <summary>
+        /// Alcohol level is just over the legal limit.
+        /// </summary>
+        JustOverLimit,
+
+        /// <summary>
+        /// Alcohol level is over the legal limit.
+        /// </summary>
+        OverLimit,
+
+        /// <summary>
+        /// Alcohol level is over double the legal limit.
+        /// </summary>
+        OverDoubleLimit,
+
+        /// <summary>
+        /// Alcohol level is over triple the legal limit.
+        /// </summary>
+        OverTripleLimit
+    }
+
 
     internal static class Breathalyzer
     {
@@ -82,7 +127,7 @@ namespace Traffic_Policer.Impairment_Tests
                                         Game.LocalPlayer.Character.Tasks.Clear();
                                     }
                                 }
-                                catch (Exception e) { }
+                                catch (Exception ) { }
                                 finally
                                 {
 
