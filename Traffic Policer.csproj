@@ -1,0 +1,152 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{EC6B789B-263C-4B73-9768-464BA19D6B18}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Traffic_Policer</RootNamespace>
+    <AssemblyName>Traffic Policer</AssemblyName>
+    <LangVersion>12.0</LangVersion>
+    <TargetFrameworkVersion>v4.8.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SccProjectName>
+    </SccProjectName>
+    <SccLocalPath>
+    </SccLocalPath>
+    <SccAuxPath>
+    </SccAuxPath>
+    <SccProvider>
+    </SccProvider>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <LangVersion>12.0</LangVersion>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <DocumentationFile>bin\Debug\Traffic Policer.XML</DocumentationFile>
+    <PlatformTarget>x64</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <PlatformTarget>x64</PlatformTarget>
+    <LangVersion>12.0</LangVersion>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x64\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <DocumentationFile>bin\Debug\Traffic Policer.XML</DocumentationFile>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <LangVersion>12.0</LangVersion>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x64'">
+    <OutputPath>bin\Release\Obfuscation\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <LangVersion>12.0</LangVersion>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <DocumentationFile>bin\Release\Obfuscation\Confused\Traffic Policer.XML</DocumentationFile>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <!-- Begin: NuGet PackageReference instead of packages.config -->
+  <ItemGroup>
+    <PackageReference Include="Microsoft.CSharp" Version="4.7.0" />
+    <PackageReference Include="RAGENativeUI" Version="1.9.3" />
+    <PackageReference Include="RagePluginHook" Version="1.109.1" />
+  </ItemGroup>
+  <!-- End: PackageReference -->
+  <ItemGroup>
+    <Reference Include="Albo1125.Common, Version=6.6.2.0, Culture=neutral, processorArchitecture=AMD64">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\DLLs\Albo1125.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="British Policing Script, Version=0.9.2.0, Culture=neutral, processorArchitecture=AMD64">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\DLLs\British Policing Script.dll</HintPath>
+    </Reference>
+    <Reference Include="LSPD First Response, Version=0.4.39.22580, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\DLLs\LSPD First Response.dll</HintPath>
+    </Reference>
+    <Reference Include="LSPDFR+, Version=1.6.6.0, Culture=neutral, processorArchitecture=AMD64">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\DLLs\LSPDFR+.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Ambientevents\AmbientEvent.cs" />
+    <Compile Include="Ambientevents\BrokenDownVehicle.cs" />
+    <Compile Include="Ambientevents\BurnoutWhenStationary.cs" />
+    <Compile Include="Ambientevents\DrugDriver.cs" />
+    <Compile Include="Ambientevents\DrunkDriver.cs" />
+    <Compile Include="Ambientevents\MobilePhone.cs" />
+    <Compile Include="Ambientevents\MotorcyclistNoHelmet.cs" />
+    <Compile Include="Ambientevents\NoBrakeLights.cs" />
+    <Compile Include="Ambientevents\NoLightsAtDark.cs" />
+    <Compile Include="Ambientevents\RevEngineWhenStationary.cs" />
+    <Compile Include="Ambientevents\Speeder.cs" />
+    <Compile Include="Ambientevents\StolenVehicle.cs" />
+    <Compile Include="Ambientevents\StreetRace.cs" />
+    <Compile Include="Ambientevents\UnroadworthyVehicle.cs" />
+    <Compile Include="API\BritishPolicingScriptFunctions.cs" />
+    <Compile Include="API\Functions.cs" />
+    <Compile Include="API\LSPDFRPlusFunctions.cs" />
+    <Compile Include="Callouts\DrugsRunners.cs" />
+    <Compile Include="Callouts\DriverUnderTheInfluence.cs" />
+    <Compile Include="Callouts\OwnerWanted.cs" />
+    <Compile Include="Callouts\ViolentGangConnection.cs" />
+    <Compile Include="GlobalUsings.cs" />
+    <Compile Include="Impairment Tests\Breathalyzer.cs" />
+    <Compile Include="Impairment Tests\DrugTestKit.cs" />
+    <Compile Include="Traffic_Policer\LicensePlateGenerator.cs" />
+    <Compile Include="Traffic_Policer\TrafficPolicerHandler.cs" />
+    <Compile Include="Extensions\ExtensionMethods.cs" />
+    <Compile Include="Traffic_Policer\Main.cs" />
+    <Compile Include="Traffic_Policer\ParkingTicket.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Traffic_Policer\RoadSigns.cs" />
+    <Compile Include="Traffic_Policer\SpeedChecker.cs" />
+    <Compile Include="Traffic_Policer\TrafficStopAssist.cs" />
+    <Compile Include="Traffic_Policer\VehicleDetails.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PostBuildEvent>
+    </PostBuildEvent>
+  </PropertyGroup>
+</Project>
