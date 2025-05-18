@@ -818,9 +818,9 @@ namespace Traffic_Policer
             {
                 Game.LogTrivial("Traffic Policer is not in beta.");
                 mainLoop();
-                Game.LogTrivial("Traffic Policer, developed by Albo1125, has been loaded successfully!");
+                Game.LogTrivial("Traffic Policer, by Albo1125 updated by Sparky for LSPDFR 0.4.9, loaded successfully");
                 GameFiber.Wait(6000);
-                Game.DisplayNotification("~b~Traffic Policer~s~, developed by ~b~Albo1125, ~s~has been loaded ~g~successfully.");
+                Game.DisplayNotification("~b~Traffic Policer~s~, by ~b~Albo1125, updated by ~b~Sparky for LSPDFR 0.4.9 ~s~has been loaded ~g~successfully.");
             });
         }
     }
